@@ -16,6 +16,9 @@ view of the author these tools are either used in a highly annotated manner (for
 compiler directives) for a specific FPGA device and application or used for experimental as well as
 educational purposes. In this project we investigated the HLS process using an [LLVM](http://llvm.org) based framework,
 and by compiling a subset of branchless C statements to dataflow modeling [Verilog](http://www.verilog.com) code.
+
+The following [UML](http://www.uml.org/) diagram represents the summarized class hierarchy use in the LLVM-to-Verilog code generator:
+![LLVM-to-Verilog class hierarchy](https://github.com/sabbaghm/c-ll-verilog/blob/master/figures/ll-verilog_uml_diagram.png)
 ## What's inside and how it works?
 The overall goal of this project was to convert a C function to a Verilog module, with the following
 features:
@@ -30,6 +33,8 @@ support)
 A simple LLVM parser and code generator are built upon a MIPS code generator LLVM pass.
 Build the c-ll-verilog tool (as `verilog` LLVM `opt` pass) in a linux machine with proper
 installation of LLVM framework, after cloning the repository and run `make` command in the main directory. You can clean the generated files using the `make clean` command.
+
+## Let's go live!
 To run the HLS tool pass your c file to the [simpleHLS.bash](https://github.com/sabbaghm/c-ll-verilog/blob/master/simpleHLS.bash) script as below (make sure simpleHLS.bash is
 set to executable using the `chmod +x simpleHLS.bash` command): 
 `./simpleHLS.bash <filename>.c`
@@ -71,6 +76,11 @@ int mask)
 //exit:
         endmodule
 ```
-The following [UML](http://www.uml.org/) diagram represents the summarized class hierarchy use in the LLVM-to-Verilog code generator:
-![LLVM-to-Verilog class hierarchy](https://github.com/sabbaghm/c-ll-verilog/blob/master/figures/ll-verilog_uml_diagram.png)
 
+## License
+
+This project is licensed under the MIT License - see the [license](https://github.com/sabbaghm/c-ll-verilog/blob/master/LICENSE) file for details
+
+## Acknowledgments
+
+This project was based on the materials presented and taught by professor Refael Ubal for the Compilers course (EECE-7398) at Northeastern University in Fall 2016.
