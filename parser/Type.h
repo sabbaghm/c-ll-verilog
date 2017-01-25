@@ -1,3 +1,12 @@
+/**
+ * @file   Type.h
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  The Type class denotes various LLVM types.
+ */
+
+
 #ifndef TYPE_H
 #define TYPE_H
 

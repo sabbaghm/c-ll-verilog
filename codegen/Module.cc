@@ -1,3 +1,11 @@
+/**
+ * @file   Module.cc
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  This file defines the operations on verilog modules.
+ */
+
 #include "CodeBlock.h"
 #include "Module.h"
 #include "DataFlow.h"

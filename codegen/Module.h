@@ -1,3 +1,11 @@
+/**
+ * @file   Module.h
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  This class contains interfaces for operating on verilog modules.
+ */
+
 #ifndef VERILOG_FUNCTION_H
 #define VERILOG_FUNCTION_H
 

@@ -1,3 +1,11 @@
+/**
+ * @file   SymbolTable.h
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  The symbol table class interfaces for LLVM parser.
+ */
+
 #ifndef SYMBOL_TABLE_H
 #define SYMBOL_TABLE_H
 

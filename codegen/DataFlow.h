@@ -1,3 +1,11 @@
+/**
+ * @file   DataFlow.h
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  Dataflow class contains acceptable verilog statements.
+ */
+
 #ifndef VERILOG_INSTRUCTION_H
 #define VERILOG_INSTRUCTION_H
 

@@ -1,3 +1,11 @@
+/**
+ * @file   parser.y
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  This is the parser description for bison.
+ */
+
 %{
 #include <iostream>
 #include <cstdio>

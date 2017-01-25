@@ -1,3 +1,11 @@
+/**
+ * @file   Argument.h
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  Argument class contains interfaces for proper operations on verilog statement arguments.
+ */
+
 #ifndef VERILOG_ARGUMENT_H
 #define VERILOG_ARGUMENT_H
 

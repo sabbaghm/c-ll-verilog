@@ -2,7 +2,7 @@
 An LLVM based mini-C to Verilog High-level Synthesis tool
 ## Overview
 In this project, we are proposing an LLVM based mini-C to Verilog high-level synthesis (HLS)
-tool, called *c-ll-verilog*. HLS is a trending topic in both the academia and industry which aims to reduce the complexity of
+tool, called **c-ll-verilog** (C to Verilog). HLS is a trending topic in both the academia and industry which aims to reduce the complexity of
 hardware design by automatically generating hardware description language (HDL) code from a higher
 level language such as C. An important different between programming languages like C and HDLs is
 that, C and similar languages are meant to be used on a predefined architectures, which usually are
@@ -12,7 +12,7 @@ their generated HDL code can be implemented on the latest field programmable gat
 system-on-chips. However, due to the inherent syntax and symantec differences in general purpose high
 level languages such as C and HDLs and the complexity of this conversion, current HLS tools cannot yet
 satisfy all of the performance, area, and power requirements of the complex systems. Therefore, in the
-view of the author these tools are either used in a highly annotated manner (for e.g. using PRAGMA or
+view of the author these tools are either used in a highly annotated manner (for e.g. using *PRAGMA* or
 compiler directives) for a specific FPGA device and application or used for experimental as well as
 educational purposes. In this project we investigated the HLS process using an [LLVM](http://llvm.org) based framework,
 and by compiling a subset of branchless C statements to dataflow modeling [Verilog](http://www.verilog.com) code.
@@ -28,7 +28,7 @@ support)
 
 ## Building the toolchain
 A simple LLVM parser and code generator are built upon a MIPS code generator LLVM pass.
-Build the *c-ll-verilog* tool (as `verilog` LLVM `opt` pass) in a linux machine with proper
+Build the c-ll-verilog tool (as `verilog` LLVM `opt` pass) in a linux machine with proper
 installation of LLVM framework, after cloning the repository and run `make` command in the main directory. You can clean the generated files using the `make clean` command.
 To run the HLS tool pass your c file to the [simpleHLS.bash](https://github.com/sabbaghm/c-ll-verilog/blob/master/simpleHLS.bash) script as below (make sure simpleHLS.bash is
 set to executable using the `chmod +x simpleHLS.bash` command): 

@@ -1,3 +1,11 @@
+/**
+ * @file   DataFlow.cc
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  Dataflow class definition.
+ */
+
 #include "llvm/IR/Function.h"
 #include "DataFlow.h"
 

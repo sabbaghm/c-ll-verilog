@@ -1,3 +1,11 @@
+/**
+ * @file   SymbolTable.h
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  The symbol table class definition for LLVM parser.
+ */
+
 #include <iostream>
 #include <sstream>
 

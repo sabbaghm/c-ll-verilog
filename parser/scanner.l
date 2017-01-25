@@ -1,3 +1,11 @@
+/**
+ * @file   scanner.l
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  The scanner description for FLEX.
+ */
+
 %{
 #include <iostream>
 #include <list>

@@ -1,3 +1,11 @@
+/**
+ * @file   Argument.cc
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  This files defines the methods for the verilog statement arguments class.
+ */
+
 #include <iostream>
 
 #include "Argument.h"

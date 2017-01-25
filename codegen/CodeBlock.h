@@ -1,3 +1,11 @@
+/**
+ * @file   CodeBlock.h
+ * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
+ * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
+ * @date   Dec, 2016
+ * @brief  CodeBlock class contains interfaces for operating on a block of verilog statements.
+ */
+
 #ifndef VERILOG_BASIC_BLOCK_H
 #define VERILOG_BASIC_BLOCK_H
 
