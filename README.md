@@ -17,8 +17,6 @@ compiler directives) for a specific FPGA device and application or used for expe
 educational purposes. In this project we investigated the HLS process using an [LLVM](http://llvm.org) based framework,
 and by compiling a subset of branchless C statements to dataflow modeling [Verilog](http://www.verilog.com) code.
 
-The following [UML](http://www.uml.org/) diagram represents the summarized class hierarchy use in the LLVM-to-Verilog code generator:
-![LLVM-to-Verilog class hierarchy](https://github.com/sabbaghm/c-ll-verilog/blob/master/figures/ll-verilog_uml_diagram.png)
 ## What's inside and how it works?
 The overall goal of this project was to convert a C function to a Verilog module, with the following
 features:
@@ -28,6 +26,9 @@ support)
 * Only a subset of branchless C statements is supported
 * Only a subset of arithmetic and logical operations are supported (addition, subtraction, signed greater than, equality, logical shift right, bitwise XOR, bitwise AND, and bitwise OR)
 * Only combinational logic with data modeling Verilog style is supported (no registers and clock)
+
+The following [UML](http://www.uml.org/) diagram represents the summarized class hierarchy use in the LLVM-to-Verilog code generator:
+![LLVM-to-Verilog class hierarchy](https://github.com/sabbaghm/c-ll-verilog/blob/master/figures/ll-verilog_uml_diagram.png)
 
 ## Building the toolchain
 A simple LLVM parser and code generator are built upon a MIPS code generator LLVM pass.
