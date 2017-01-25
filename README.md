@@ -19,12 +19,12 @@ and by compiling a subset of branchless C statements to dataflow modeling [Veril
 ## What's inside and how it works?
 The overall goal of this project was to convert a C function to a Verilog module, with the following
 features:
-	* C function arguments are used as Verilog module input ports (no pointer, array, and struct
+* C function arguments are used as Verilog module input ports (no pointer, array, and struct
 support)
-	* C function return value are used as Verilog module output port
-	* Only a subset of branchless C statements is supported
-	* Only a subset of arithmetic and logical operations are supported (addition, subtraction, signed greater than, equality, logical shift right, bitwise XOR, bitwise AND, and bitwise OR)
-	* Only combinational logic with data modeling Verilog style is supported (no registers and clock)
+* C function return value are used as Verilog module output port
+* Only a subset of branchless C statements is supported
+* Only a subset of arithmetic and logical operations are supported (addition, subtraction, signed greater than, equality, logical shift right, bitwise XOR, bitwise AND, and bitwise OR)
+* Only combinational logic with data modeling Verilog style is supported (no registers and clock)
 In the first step the latest LLVM parser is extended to support non void returns from functions. For that
 the scanner.l and parser.y files are modified as showed in the README file included in the tar ball. After
 that, the code generation part is built upon the MIPS code generator LLVM pass. To create the simple
@@ -36,7 +36,7 @@ You should see the generated Verilog file in the same directory as <filename>.v.
 Note that after the parsing process mem2reg LLVM optimization is used to simplify the LLVM code
 remove memory allocation and accesses as it is not supported by our simple HLS tool.
 An example C code ([filter.c](sabbaghm/srcs/repo)),
-```
+```c
 bool adder(int in1, int in2, int threshold,
 int mask)
 {
@@ -45,7 +45,7 @@ int mask)
 ```
  and its conversion to Verilog code ([filter.v](sabbaghm/srcs/repo):
 
-```
+```verilog
 //entry:
 module adder (
 input wire [31:0] in1,
@@ -70,4 +70,6 @@ assign result = wire004;
 endmodule
 
 ```
+The following [UML](http://www.uml.org/) diagram represents the summarized class hierarchy use in the LLVM-to-Verilog code generator:
+![LLVM-to-Verilog class hierarchy](github)
 
