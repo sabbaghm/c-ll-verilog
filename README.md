@@ -30,14 +30,14 @@ support)
 A simple LLVM parser and code generator are built upon a MIPS code generator LLVM pass.
 Build the *c-ll-verilog* tool (as `verilog` LLVM `opt` pass) in a linux machine with proper
 installation of LLVM framework, after cloning the repository and run `make` command in the main directory. You can clean the generated files using the `make clean` command.
-To run the HLS tool pass your c file to the [simpleHLS.bash]((https://github.com/sabbaghm/c-ll-verilog/master/figures/simpleHLS.bash) script as below (make sure simpleHLS.bash is
+To run the HLS tool pass your c file to the [simpleHLS.bash](https://github.com/sabbaghm/c-ll-verilog/blob/master/simpleHLS.bash) script as below (make sure simpleHLS.bash is
 set to executable using the `chmod +x simpleHLS.bash` command): 
 `./simpleHLS.bash <filename>.c`
 You should see the generated Verilog file in the same directory as <filename>.v. So the only thing that is needed is to pass the input C file as an argument to the script and it produces the corresponding Verilog file with the same name.
 
 Note that after the parsing process mem2reg LLVM optimization is used to simplify the LLVM code
 remove memory allocation and accesses as it is not supported by our simple HLS tool.
-An example C code ([filter.c](https://github.com/sabbaghm/c-ll-verilog/master/figures/filter.c)),
+An example C code ([filter.c](https://github.com/sabbaghm/c-ll-verilog/blob/master/filter.c)),
 ```C
 bool adder(int in1, int in2, int threshold,
 int mask)
@@ -72,5 +72,5 @@ int mask)
         endmodule
 ```
 The following [UML](http://www.uml.org/) diagram represents the summarized class hierarchy use in the LLVM-to-Verilog code generator:
-![LLVM-to-Verilog class hierarchy](https://github.com/sabbaghm/c-ll-verilog/master/figures/ll-verilog_uml_diagram.png)
+![LLVM-to-Verilog class hierarchy](https://github.com/sabbaghm/c-ll-verilog/blob/master/figures/ll-verilog_uml_diagram.png)
 
