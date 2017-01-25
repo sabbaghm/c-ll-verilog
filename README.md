@@ -12,7 +12,7 @@ their generated HDL code can be implemented on the latest field programmable gat
 system-on-chips. However, due to the inherent syntax and symantec differences in general purpose high
 level languages such as C and HDLs and the complexity of this conversion, current HLS tools cannot yet
 satisfy all of the performance, area, and power requirements of the complex systems. Therefore, in the
-view of the author these tools are either used in a highly annotated manner (for e.g. using PRAGMAS or
+view of the author these tools are either used in a highly annotated manner (for e.g. using PRAGMA or
 compiler directives) for a specific FPGA device and application or used for experimental as well as
 educational purposes. In this project we investigated the HLS process using an [LLVM](http://llvm.org) based framework,
 and by compiling a subset of branchless C statements to dataflow modeling [Verilog](http://www.verilog.com) code.
