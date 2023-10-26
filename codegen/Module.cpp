@@ -1,14 +1,20 @@
 /**
- * @file   Module.cc
+ * @file   Module.cpp
  * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
  * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
  * @date   Dec, 2016
  * @brief  This file defines the operations on verilog modules.
  */
 
-#include "CodeBlock.h"
-#include "Module.h"
-#include "DataFlow.h"
+/**
+ * Update: Support New Pass Manager (tested on LLVM 17/18) and migrate to CPP
+ * @author Mohamed Bouaziz (mohamed.bouaziz@kaust.edu.sa), KAUST
+ * @date   Oct, 2023
+*/
+
+#include "CodeBlock.hpp"
+#include "Module.hpp"
+#include "DataFlow.hpp"
 
 
 namespace verilog
@@ -113,7 +119,7 @@ Wire *Module::translateLLVMValueWire(CodeBlock *code_block,
 	}
 	else
 	{
-		Wire *wire = wirelookupSymbol(llvm_value->getName());
+		Wire *wire = wirelookupSymbol(llvm_value->getName().str());
 		return new Wire(wire->getName(), direction);
 	}
 }
@@ -145,7 +151,7 @@ Register *Module::translateLLVMValueRegister(CodeBlock *code_block,
 	}
 	else
 	{
-		Register *reg = registerlookupSymbol(llvm_value->getName());
+		Register *reg = registerlookupSymbol(llvm_value->getName().str());
 		return new Register(reg->getName(), direction, seqReg);
 	}
 }

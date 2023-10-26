@@ -1,15 +1,21 @@
 /**
- * @file   Argument.cc
+ * @file   Argument.cpp
  * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
  * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
  * @date   Dec, 2016
  * @brief  This files defines the methods for the verilog statement arguments class.
  */
 
+/**
+ * Update: Support New Pass Manager (tested on LLVM 17/18) and migrate to CPP
+ * @author Mohamed Bouaziz (mohamed.bouaziz@kaust.edu.sa), KAUST
+ * @date   Oct, 2023
+*/
+
 #include <iostream>
 
-#include "Argument.h"
-#include "CodeBlock.h"
+#include "Argument.hpp"
+#include "CodeBlock.hpp"
 
 
 namespace verilog

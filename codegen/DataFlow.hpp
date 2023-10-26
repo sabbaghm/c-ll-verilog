@@ -1,10 +1,16 @@
 /**
- * @file   DataFlow.h
+ * @file   DataFlow.hpp
  * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
  * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
  * @date   Dec, 2016
  * @brief  Dataflow class contains acceptable verilog statements.
  */
+
+/**
+ * Update: Support New Pass Manager (tested on LLVM 17/18) and migrate to CPP
+ * @author Mohamed Bouaziz (mohamed.bouaziz@kaust.edu.sa), KAUST
+ * @date   Oct, 2023
+*/
 
 #ifndef VERILOG_INSTRUCTION_H
 #define VERILOG_INSTRUCTION_H
@@ -12,7 +18,7 @@
 #include <iostream>
 #include <list>
 
-#include "Argument.h"
+#include "Argument.hpp"
 
 
 namespace verilog

@@ -1,19 +1,20 @@
-/* A Bison parser, made by GNU Bison 2.7.  */
+/* A Bison parser, made by GNU Bison 3.5.1.  */
 
 /* Bison interface for Yacc-like parsers in C
-   
-      Copyright (C) 1984, 1989-1990, 2000-2012 Free Software Foundation, Inc.
-   
+
+   Copyright (C) 1984, 1989-1990, 2000-2015, 2018-2020 Free Software Foundation,
+   Inc.
+
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
-   
+
    This program is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
-   
+
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
@@ -26,13 +27,16 @@
    special exception, which will cause the skeleton and the resulting
    Bison output files to be licensed under the GNU General Public
    License without this special exception.
-   
+
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
+/* Undocumented macros, especially those whose name start with YY_,
+   are private implementation details.  Do not rely on them.  */
+
 #ifndef YY_YY_PARSER_H_INCLUDED
 # define YY_YY_PARSER_H_INCLUDED
-/* Enabling traces.  */
+/* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
 #endif
@@ -40,62 +44,60 @@
 extern int yydebug;
 #endif
 
-/* Tokens.  */
+/* Token type.  */
 #ifndef YYTOKENTYPE
 # define YYTOKENTYPE
-   /* Put the tokens into the symbol table, so that GDB and other debuggers
-      know about them.  */
-   enum yytokentype {
-     TokenBool = 258,
-     TokenShort = 259,
-     TokenInt = 260,
-     TokenFloat = 261,
-     TokenVoid = 262,
-     TokenStruct = 263,
-     TokenId = 264,
-     TokenNumber = 265,
-     TokenOpenCurly = 266,
-     TokenCloseCurly = 267,
-     TokenOpenSquare = 268,
-     TokenCloseSquare = 269,
-     TokenOpenPar = 270,
-     TokenClosePar = 271,
-     TokenSemicolon = 272,
-     TokenComma = 273,
-     TokenPoint = 274,
-     TokenEqual = 275,
-     TokenLogicalOr = 276,
-     TokenLogicalAnd = 277,
-     TokenLogicalNot = 278,
-     Toke = 279,
-     TokenGreaterThan = 280,
-     TokenLessThan = 281,
-     TokenGreaterEqual = 282,
-     TokenLessEqual = 283,
-     TokenNotEqual = 284,
-     TokenDoubleEqual = 285,
-     TokenBitwiseOr = 286,
-     TokenBitwiseXor = 287,
-     TokenBitwiseAnd = 288,
-     TokenLogicalShiftRight = 289,
-     TokenMinus = 290,
-     TokenPlus = 291,
-     TokenDiv = 292,
-     TokenMult = 293,
-     TokenIf = 294,
-     TokenThen = 295,
-     TokenElse = 296,
-     TokenWhile = 297,
-     TokenReturn = 298
-   };
+  enum yytokentype
+  {
+    TokenBool = 258,
+    TokenShort = 259,
+    TokenInt = 260,
+    TokenFloat = 261,
+    TokenVoid = 262,
+    TokenStruct = 263,
+    TokenId = 264,
+    TokenNumber = 265,
+    TokenOpenCurly = 266,
+    TokenCloseCurly = 267,
+    TokenOpenSquare = 268,
+    TokenCloseSquare = 269,
+    TokenOpenPar = 270,
+    TokenClosePar = 271,
+    TokenSemicolon = 272,
+    TokenComma = 273,
+    TokenPoint = 274,
+    TokenEqual = 275,
+    TokenLogicalOr = 276,
+    TokenLogicalAnd = 277,
+    TokenLogicalNot = 278,
+    Toke = 279,
+    TokenGreaterThan = 280,
+    TokenLessThan = 281,
+    TokenGreaterEqual = 282,
+    TokenLessEqual = 283,
+    TokenNotEqual = 284,
+    TokenDoubleEqual = 285,
+    TokenPlus = 286,
+    TokenMinus = 287,
+    TokenLogicalShiftRight = 288,
+    TokenBitwiseAnd = 289,
+    TokenBitwiseXor = 290,
+    TokenBitwiseOr = 291,
+    TokenMult = 292,
+    TokenDiv = 293,
+    TokenIf = 294,
+    TokenThen = 295,
+    TokenElse = 296,
+    TokenWhile = 297,
+    TokenReturn = 298
+  };
 #endif
 
-
+/* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef union YYSTYPE
+union YYSTYPE
 {
-/* Line 2058 of yacc.c  */
-#line 78 "parser.y"
+#line 86 "parser.y"
 
 	char *name;
 	llvm::Value *llvalue;
@@ -140,29 +142,17 @@ typedef union YYSTYPE
 	// For 'ActualArguments' and 'ActualArgummentsComma'
 	std::vector<llvm::Value *> *actual_arguments;
 
-
-/* Line 2058 of yacc.c  */
 #line 146 "parser.h"
-} YYSTYPE;
+
+};
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
-# define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
 #endif
 
+
 extern YYSTYPE yylval;
 
-#ifdef YYPARSE_PARAM
-#if defined __STDC__ || defined __cplusplus
-int yyparse (void *YYPARSE_PARAM);
-#else
-int yyparse ();
-#endif
-#else /* ! YYPARSE_PARAM */
-#if defined __STDC__ || defined __cplusplus
 int yyparse (void);
-#else
-int yyparse ();
-#endif
-#endif /* ! YYPARSE_PARAM */
 
 #endif /* !YY_YY_PARSER_H_INCLUDED  */
