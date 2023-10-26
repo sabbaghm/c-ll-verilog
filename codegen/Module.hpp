@@ -1,10 +1,16 @@
 /**
- * @file   Module.h
+ * @file   Module.hpp
  * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
  * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
  * @date   Dec, 2016
  * @brief  This class contains interfaces for operating on verilog modules.
  */
+
+/**
+ * Update: Support New Pass Manager (tested on LLVM 17/18) and migrate to CPP
+ * @author Mohamed Bouaziz (mohamed.bouaziz@kaust.edu.sa), KAUST
+ * @date   Oct, 2023
+*/
 
 #ifndef VERILOG_FUNCTION_H
 #define VERILOG_FUNCTION_H
@@ -12,7 +18,7 @@
 
 #include "llvm/IR/Function.h"
 #include "llvm/IR/Constants.h"
-#include "Argument.h"
+#include "Argument.hpp"
 
 #include <unordered_map>
 

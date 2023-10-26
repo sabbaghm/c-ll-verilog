@@ -1,14 +1,20 @@
-CC = g++
-INCLUDE = .
-CFLAGS = -I$(INCLUDE) -fPIC -shared `llvm-config --cppflags` -std=c++11
+# Update: Support New Pass Manager (tested on LLVM 17/18) and migrate to CPP
+# @author Mohamed Bouaziz (mohamed.bouaziz@kaust.edu.sa), KAUST
+# @date   Oct, 2023
 
-ALLSRCS = *.cc
 
-TARGETALL = verilog.so
+CXX = clang++
+CXXFLAGS = -fPIC -shared -fno-rtti $(shell llvm-config --cppflags) -std=c++17
+LDFLAGS = 
 
-all: $(TARGETALL)
-$(TARGETALL): $(ALLSRCS)
-	$(CC) $(CFLAGS) $(INCLUDES) $(ALLSRCS) -o $(TARGETALL)
+ALLSRCS = *.cpp
+
+TARGET = verilog.so
+
+all: $(TARGET)
+
+$(TARGET): $(ALLSRCS)
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
 clean:
-	$(RM) $(TARGETBISON) $(TARGETFLEX) $(TARGETALL)
+	$(RM) $(OBJS) $(TARGET)

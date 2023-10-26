@@ -1,10 +1,16 @@
 /**
- * @file   Argument.h
+ * @file   Argument.hpp
  * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
  * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
  * @date   Dec, 2016
  * @brief  Argument class contains interfaces for proper operations on verilog statement arguments.
  */
+
+/**
+ * Update: Support New Pass Manager (tested on LLVM 17/18) and migrate to CPP
+ * @author Mohamed Bouaziz (mohamed.bouaziz@kaust.edu.sa), KAUST
+ * @date   Oct, 2023
+*/
 
 #ifndef VERILOG_ARGUMENT_H
 #define VERILOG_ARGUMENT_H
@@ -158,7 +164,7 @@ public:
 	// used for instruction printing purposes.
 	static bool isSeqRegister(Argument *argument)
 	{
-		Register *r = dynamic_cast<Register *>(argument);
+		Register *r = static_cast<Register *>(argument);
 		return r && r->isSequential();
 	}
 

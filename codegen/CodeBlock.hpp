@@ -1,10 +1,16 @@
 /**
- * @file   CodeBlock.h
+ * @file   CodeBlock.hpp
  * @Author Rafael Ubal (ubal@ece.neu.edu), Northeastern University
  * @Author Majid Sabbagh (sabbagh.m@husky.neu.edu), Northeastern University
  * @date   Dec, 2016
  * @brief  CodeBlock class contains interfaces for operating on a block of verilog statements.
  */
+
+/**
+ * Update: Support New Pass Manager (tested on LLVM 17/18) and migrate to CPP
+ * @author Mohamed Bouaziz (mohamed.bouaziz@kaust.edu.sa), KAUST
+ * @date   Oct, 2023
+*/
 
 #ifndef VERILOG_BASIC_BLOCK_H
 #define VERILOG_BASIC_BLOCK_H
