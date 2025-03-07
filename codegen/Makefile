@@ -1,6 +1,6 @@
 CC = g++
 INCLUDE = .
-CFLAGS = -I$(INCLUDE) -fPIC -shared `llvm-config --cppflags` -std=c++11
+CFLAGS = -I$(INCLUDE) -fPIC -shared `llvm-config --cppflags` -std=c++17
 
 ALLSRCS = *.cc
 

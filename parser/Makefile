@@ -2,7 +2,7 @@ CC = g++
 BISON = bison
 FLEX = flex
 INCLUDE = .
-CFLAGS = -I$(INCLUDE) -Wall -lLLVM-3.4 `llvm-config --cppflags` `llvm-config --ldflags` -std=c++11
+CFLAGS = -I$(INCLUDE) -Wall `llvm-config --cppflags` `llvm-config --ldflags` -std=c++17
 BISONFLAGS = -d -v --report-file=bisonreport.output
 BISONSRCS = parser.y
 FLEXSRCS = scanner.l
